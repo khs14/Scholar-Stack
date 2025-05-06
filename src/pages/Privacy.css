@@ -1,0 +1,142 @@
+/* Privacy.css */
+.privacy-page {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .privacy-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .full-width {
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  .privacy-section {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    color: var(--primary-color, #4CAF50); /* Use variable with fallback */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  h2 {
+    color: var(--primary-color, #4CAF50); /* Use variable with fallback */
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  
+  .welcome-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+  }
+  
+  .closing-text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .privacy-section p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .privacy-list {
+    text-align: center;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .privacy-list li {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Override container styles from App.css */
+  .privacy-page .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .privacy-container {
+      padding: 1.5rem 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+    
+    .welcome-text, .closing-text {
+      font-size: 1.1rem;
+    }
+    
+    .privacy-section p,
+    .privacy-list li {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .privacy-container {
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.75rem;
+    }
+    
+    h2 {
+      font-size: 1.25rem;
+    }
+    
+    .welcome-text, .closing-text {
+      font-size: 1rem;
+    }
+    
+    .privacy-section p,
+    .privacy-list li {
+      font-size: 0.95rem;
+    }
+  }

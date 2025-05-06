@@ -1,0 +1,144 @@
+.slideshow-section {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.03);
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.slideshow-section h2 {
+  margin-bottom: 1rem;
+}
+
+.slideshow {
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+  width: 100%;
+}
+
+.slide img {
+  max-height: 80%;
+  max-width: 100%; /* Increased image width */
+  object-fit: contain;
+}
+
+.slide-caption {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  font-size: 1.1rem;
+  position: relative;
+  bottom: 0;
+  margin-bottom: 3rem; /* Added space above the slide indicators */
+}
+
+.slide-indicators {
+  position: absolute;
+  bottom: 15px; /* Moved slightly lower */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem; /* Increased gap between indicators */
+}
+
+.indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+}
+
+.indicator:hover {
+  transform: scale(1.2);
+}
+
+.indicator.active {
+  background-color: var(--primary-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .slide img {
+    max-height: 65%;
+    max-width: 100%; /* Increased image width */
+    object-fit: contain;
+  }
+  .slideshow {
+    height: 350px; /* Slightly increased height */
+  }
+  
+  .slide-caption {
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin-bottom: 2.5rem; /* More space between caption and indicators */
+  }
+  
+  .slide img {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  .slideshow-section {
+    padding: 2rem 0;
+  }
+  
+  .slideshow {
+    height: 300px; /* Increased height for mobile */
+  }
+  
+  .slide-caption {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem; /* More space between caption and indicators on mobile */
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .slide-indicators {
+    bottom: 10px;
+  }
+}

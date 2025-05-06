@@ -1,0 +1,312 @@
+/* Add this new wrapper class at the top of your CSS */
+.full-width-wrapper {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Your existing CSS */
+  .app {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Modify the signup-container */
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0; /* Remove horizontal padding */
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Increase the max-width of the form container for desktop */
+  .signup-form-container {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1400px; /* Set a specific max-width */
+    padding: 2.5rem;
+    margin: 0 auto;
+  }
+  
+  .signup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .signup-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .signup-description {
+    color: #b0b0b0;
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-section h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+    width: 100%;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.25);
+  }
+  
+  .form-group input.error {
+    border-color: var(--error-color);
+  }
+  
+  .error-text {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: block;
+  }
+  
+  .password-hint {
+    color: #b0b0b0;
+    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    display: block;
+  }
+  
+  .required {
+    color: var(--error-color);
+  }
+  
+  .success-message {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: #81c784;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .error-message {
+    background-color: rgba(207, 102, 121, 0.1);
+    border: 1px solid rgba(207, 102, 121, 0.3);
+    color: var(--error-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .benefits-section {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .benefits-section h3 {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+  
+  .benefits-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .benefits-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .benefit-text strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+  }
+  
+  .benefit-text p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+  }
+  
+  .terms-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .terms-container input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--accent-color);
+  }
+  
+  .terms-container label {
+    font-size: 0.9rem;
+  }
+  
+  .terms-container a {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+  
+  .signup-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: #000;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #a270e0;
+    transform: translateY(-2px);
+  }
+  
+  .signup-button:disabled {
+    background-color: rgba(187, 134, 252, 0.5);
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .login-link {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  
+  .login-link a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .signup-form-container {
+      padding: 2rem;
+    }
+    
+    .signup-header h1 {
+      font-size: 2.25rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .benefits-list {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .benefits-list li {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .benefits-list li:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .signup-container {
+      padding: 1rem 0.5rem;
+    }
+    
+    .signup-form-container {
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+    }
+    
+    .signup-header h1 {
+      font-size: 1.75rem;
+    }
+    
+    .form-section h2 {
+      font-size: 1.25rem;
+    }
+    
+    .form-group input {
+      padding: 0.7rem 0.85rem;
+    }
+    
+    .signup-button {
+      padding: 0.85rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .signup-form-container {
+      max-width: 1600px; /* Even wider on very large screens */
+      margin: 0 auto;
+    }
+  }
