@@ -9,7 +9,6 @@
   --accent-color: #BB86FC;
   --error-color: #CF6679;
   --border-radius: 8px;
-  --scrollbar-color: #4CAF50;
 }
 
 * {
@@ -17,55 +16,42 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-color) #4CAF50;
+}
+
+/* ===== Global Floating Scrollbar Style ===== */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px; /* thinner, modern width */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* fully transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(76, 175, 80, 0.4); /* primary color, 40% opacity */
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4); /* soft inner shadow for depth */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(33, 150, 243, 0.6); /* secondary color, slightly more visible on hover */
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(76, 175, 80, 0.4) transparent;
 }
 
 
 ::selection {
-  color: rgb(131, 0, 192);
+  color: rgb(255, 0, 0);
   background: #000000;
 }
 
-/* Track */
-::-webkit-scrollbar {
-  width: 8px;
-}
 
-::-webkit-scrollbar-track {
-  background: #000000; /* Black background */
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--primary-color); /* Primary color thumb */
-  border-radius: 4px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #3d8c40; /* Darker primary color */
-}
-
-/* Arrows */
-::-webkit-scrollbar-button:single-button {
-    background-color: var(--primary-color); /* Primary color arrow */
-    display: block;
-    border-style: solid;
-    height: 12px;
-    width: 16px;
-}
-
-/* Up arrow */
-::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-width: 0 8px 8px 8px;
-    border-color: transparent transparent var(--background-color) transparent;
-}
-
-/* Down arrow */
-::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-width: 8px 8px 0 8px;
-    border-color: var(--background-color) transparent transparent transparent;
-}
 
 body {
   font-family: 'Poppins', sans-serif;
