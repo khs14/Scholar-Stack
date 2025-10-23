@@ -223,8 +223,8 @@ textarea::placeholder {
 
 
 .success-message {
-  background-color: var(--accent-color);
-  color: var(--text-color);
+  background-color: var(--card-color);
+  color: var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
