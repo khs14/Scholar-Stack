@@ -284,7 +284,7 @@ const Upload = () => {
 
       {error && <div className="error-message">{error}</div>}
       {success && (
-        <div className="success-message">
+        <div className="success-message success-primary">
           <p>{success}</p>
           <button 
             onClick={() => navigate('/profile')}
